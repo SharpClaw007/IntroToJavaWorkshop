@@ -5,27 +5,68 @@ import org.jointheleague.graphical.robot.Robot;
 
 public class FourSquare {
 	
-	// 2. Create a new Robot
+	Robot r2D2 = new Robot("mini");
 	
 
 	void go() {
-		// 4. Make the robot move as fast as possible
+		r2D2.setSpeed(50);
 
-		// 5. Set the pen width to 5
+		r2D2.setPenWidth(3);
 
 		// 6. Do steps #7 to #8 four times...
 
-			// 7. Set the pen color to random
+			for(int i = 0; i < 4; i++)
+			{
+					r2D2.setRandomPenColor();
 	
-			// 1. Call the drawSquare() method
+					drawSquare();
 	
-			// 8. Turn the robot 90 degrees to the right
+					r2D2.turn(90);
+			}
+			r2D2.turn(-90);
+			r2D2.penUp();
+			r2D2.move(100);
+			for(int i = 0; i < 4; i++)
+			{
+					r2D2.setRandomPenColor();
+	
+					drawSquare();
+	
+					r2D2.turn(90);
+			}
+			r2D2.penUp();
+			r2D2.move(200);
+			for(int i = 0; i < 4; i++)
+			{
+					r2D2.setRandomPenColor();
+	
+					drawSquare();
+	
+					r2D2.turn(90);
+			}
+			r2D2.penUp();
+			r2D2.turn(90);
+			r2D2.turn(90);
+			r2D2.move(500);
+			r2D2.turn(-90);
+			for(int i = 0; i < 4; i++)
+			{
+					r2D2.setRandomPenColor();
+	
+					drawSquare();
+	
+					r2D2.turn(90);
+			}
+			r2D2.penUp();
+			
 
 	}
 
 	/* 3. Fill in the code to draw a square inside the method below. */
 	void drawSquare() {
-		JOptionPane.showMessageDialog(null, "yay! you called the drawSquare() method!");
+		//JOptionPane.showMessageDialog(null, "yay! you called the drawSquare() method!");
+		r2D2.penDown();
+		r2D2.move(100);
 
 		
 		
@@ -34,5 +75,5 @@ public class FourSquare {
 	public static void main(String[] args) {
 		new FourSquare().go();
 	}
-
+	
 }

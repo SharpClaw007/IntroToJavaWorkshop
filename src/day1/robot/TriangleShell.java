@@ -1,35 +1,48 @@
 package day1.robot;
 
 import org.jointheleague.graphical.robot.Robot;
+import org.teachingextensions.logo.Tortoise;
 
 public class TriangleShell {
 
-	// 1. Create a new Robot
+	Robot bob = new Robot("mini");
 
 	
 	void go() {
-		drawTriangle(100); // 3. delete this line (used only for testing)
 
-		// 6. Make the robot go as fast as possible
+		bob.setSpeed(10);
 
-		// 4. make a variable to hold the length of the triangle and set it to 50
+		 int triLength = 50;
 
-		// 7. Do the following (up to step 10) 60 times
+		 for(int i = 0; i < 60; i++)
+		 {
 
-			// 9. Change the color of the pen to a random color
+			bob.setRandomPenColor();
 	
 			// 8. Increase the length of the side by 10 pixels
+			triLength = 50 + 10;
 	
 			// 5. call your drawTriangle() method using your length variable
+			drawTriangle(triLength);
 	
 			// 10. Turn the tortoise 6 degrees to the right
+			bob.turn(6);
+		 }
 
 	}
 
 	/* 2. fill in the method below to draw a triangle. Use the length variable for the size of the triangle. */
 	private void drawTriangle(int length) {
 		
-		
+		bob.penDown();
+		bob.turn(-130);
+		bob.move(100);
+		bob.turn(-130);
+		bob.move(100);
+		bob.turn(-115);
+		bob.move(85);
+		bob.penUp();
+		bob.move(100);
 		
 	}
 
