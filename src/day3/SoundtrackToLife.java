@@ -16,7 +16,7 @@ public class SoundtrackToLife {
 		JOptionPane.showMessageDialog(null, "" + userMood);
 
 		// 3. If they are in a sad mood, use the playVideo method to play a happy song from YouTube.
-		if(userMood == 0)
+		if(userMood == 2)
 		{
 			playVideo("https://www.youtube.com/watch?v=7E1Dfm4mHZo");
 		}
@@ -24,7 +24,7 @@ public class SoundtrackToLife {
 		{
 			playVideo("https://www.youtube.com/watch?v=JxJsai5nkGI");
 		}
-		if(userMood == 2)
+		if(userMood == 0)
 		{
 			playVideo("https://www.youtube.com/watch?v=6-6YCLFiUEg");
 		}
